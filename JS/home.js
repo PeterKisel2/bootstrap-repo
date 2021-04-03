@@ -9,3 +9,13 @@ $(function(){
         };
     });
 });
+
+
+$(function(){
+    new WOW().init(); 
+  });
+
+$(window).on('load', function(){
+
+    new WOW().init(); 
+});
