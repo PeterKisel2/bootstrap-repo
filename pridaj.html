@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="sk">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,12 +7,13 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="CSS/style2.css" />
 
-    <title>Bootstrap website</title>
+    <title>Pridaj nov=u položku</title>
   </head>
   <body>
-    <div class="container-fluid">
+      <div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-light">
           <div class="container-fluid">
             <a href="#" class="navbar-brand"><img src="content/35-353932_bootstrap-bootstrap-4-logo-png-clipart.png" alt=""> BOOTSTRAP</a>
@@ -49,83 +50,58 @@
             </div>
           </div>
         </nav>
-        <div class="container-fluid">
-          <div class="row">
 
-            <div class="col-md-2">column 1
-              <ul></ul>
-            </div>
+        <div class="container mt-5 mb-5">
+            <h1>Pridaj príjem / výdaj</h1>
+            <form action="">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="nazov" class="form-label" >Názov položky</label>
+                        <input type="text" class="form-control" id="nazov" placeholder="Názov Položky">
+                    </div>
 
-            <div class="col-md">
-              <div class="container mt-3">
-                <h2 class="text-center">Celkové príjmny - výdaje</h2>
-                <div class="row text-center">
-                  <div class="col headline-size">
-                    <span class="badge rounded-pill bg-success">20000</span> -
-                    <span class="badge rounded-pill bg-danger">22000</span>  
-                  </div>
+                    <div class="col-md-2">
+                        <label for="cena" class="form-label" >Cena</label>
+                        <input type="text" class="form-control" id="cena" placeholder="Cena Položky">
+                    </div>
                 </div>
-              </div>
-
-              <div class="container mt-3">
-                <h1>Tento mesiac</h1>
-                <div class="row">
-                  <div class="col">
-                    <p>príjem: <span class="text-success">1100</span></p>
-                    <p>výdaj: <span class="text-danger">650</span></p>
-                  </div>
-                  <div class="col">
-                    <canvas id="mojGraf1" width="100" height="100"></canvas>
-                  </div>
-                  <div class="col">
-                    <canvas id="mojGraf2" width="100" height="100"></canvas>
-                  </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="textarea" class="form-label">Popis</label>
+                        <textarea name="" id="textarea" rows="3" class="form-control" placeholder="Pridaj popis"></textarea>
+                    </div>
                 </div>
-              </div>
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="datum" class="form-label">Dátum nákupu</label>
+                        <input type="date" class="form-control" id="datum">
+                    </div>
 
-              <div class="container mt-3">
-                <h1>Minulý mesiac</h1>
-                <div class="row">
-                  <div class="col">
-                    <p>príjem: <span class="text-success">1000</span></p>
-                    <p>výdaj: <span class="text-danger">470</span></p>
-                  </div>
-                  <div class="col">
-                    <canvas id="mojGraf3" width="100" height="100"></canvas>
-                  </div>
-                  <div class="col">
-                    <canvas id="mojGraf4" width="100" height="100"></canvas>
-                  </div>
+                    <div class="col-md-4">
+                        <label for="druhPolozky" class="form-label">Druh položky</label>
+                        <select name="" id="druh" class="form-select">
+                            <option value="0">Príjem</option>
+                            <option value="1">Výdaj</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="kategoria" class="form-label">Kategória</label>
+                        <select name="" id="kategoria" class="form-select">
+                            <option selected>...vyber</option>
+                            <option value="0">Oblečenie</option>
+                            <option value="1">Výplata</option>
+                            <option value="2">Drogéria</option>
+                            <option value="3">Lieky</option>
+                            <option value="4">Príjem</option>
+                        </select>
+                    </div>
                 </div>
-              </div>
+            </form>
+            <button type="submit" class="btn btn-primary">Pridaj</button>
 
-              <div class="container mt-3">
-                <h2>Naposledy pridané položky:</h2>
-                <div class="row">
-                  <div class="col">
-                    <dl>
-                      <dt><a href="#">Prídavky</a></dt>
-                      <dd>Pravidelný prídavok na dieťa. <span class="badge bg-success">23 eur</span></dd>
-                      
-                      <dt><a href="#">Nové topánky</a></dt>
-                      <dd>Poreboval som nové topánky. <span class="badge bg-danger">50 eur</span></dd>
-                      
-                      <dt><a href="#">Potraviny</a></dt>
-                      <dd><span class="badge bg-danger">91 eur</span></dd>
-  
-                    </dl>
-                  </div>
-                </div>
-              </div>
-
-              <div class="container text-center mt-5 mb-5">
-                <a href="#" class="btn btn-lg btn-primary">Prehľad</a>
-              </div>
-            </div>
-
-            <div class="col-md-2">column 3</div>
-          </div>
         </div>
+
         <footer class="container-fluid">
           <div class="container">
             <div class="row">
@@ -133,16 +109,16 @@
             </div>
           </div>
         </footer>
-    </div>
-  
+      </div>
+    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    <script src="http://code.jquery.com/jquery.js"></script>
+    
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="JS/main.js"></script>
-    <script src="JS/grafy.js"></script>
   </body>
 </html>

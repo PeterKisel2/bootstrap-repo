@@ -1,0 +1,87 @@
+body {
+    padding-top: 4.5rem;
+    }
+
+nav.navbar {
+    background-color: #e9ecef !important;
+}
+
+
+
+.nav-scroll-style {
+    background-color: white;
+    border-bottom: 1px solid black;
+    transition: 0.3s all;
+}
+
+.home {
+    background-color: #e9ecef;
+}
+
+
+.img-fluid {
+    background-image: url("../content/white-plaster-stucco-wall-texture-background-light-beam-right-suitable-architect-interior-design-articles-web-185321920.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.i1 {
+    color: rgb(0, 170, 9);
+}
+
+.i2 {
+    color: rgb(255, 81, 81);
+}
+
+.i3 {
+    color: rgb(145, 37, 247);
+}
+
+#carousel {
+    background-color: #34495e;
+}
+
+#carousel .carousel-item {
+    height: 200px;
+}
+
+.btn-block {
+    display: block!important;
+}
+
+#ceny .card-header {
+    font-size: 1.5rem;
+}
+
+#ceny .card-header#best {
+    font-size: 1.8rem;
+}
+
+#faq {
+    background-color: rgb(221, 221, 221);
+}
+
+[data-bs-toggle="collapse"] {
+    cursor: pointer;
+}
+
+
+#footerList h4 {
+    padding-bottom: 0.5rem;
+}
+
+.list-unstyled a {
+    text-decoration: none;
+    color: #929292;
+    line-height: 2rem;
+}
+
+#footer {
+    background-color: #e9ecef;
+    height: 100px;
+    align-items: center;
+    display: flex;
+}
+
+
+
